@@ -20,6 +20,7 @@ h1 {
 h2 {
     font-size: 35px;
     color: #94ed64;
+    margin-bottom: 15px;
 }
 
 p {
@@ -99,7 +100,6 @@ img + p {
     font-size: 18px;
     color: white;
     background-color: black;
-    padding: 10px;
 }
 
 footer {
