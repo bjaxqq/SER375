@@ -21,6 +21,7 @@ body {
     margin-right: 10px;
     text-decoration: none;
     transition: color 0.3s, text-decoration 0.3s;
+    padding: 5px;
 }
 
 .navbar-item:hover {
