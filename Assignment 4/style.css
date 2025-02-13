@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 17px 30px;
+    gap: 20px;
+}
+
+.google-images-button a {
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.google-images-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.sign-in-button a {
+    background-color: #0b57d0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 100px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -115px;
+}
+
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.google-logo {
+    width: 275px;
+    height: 95px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 584px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    background-color: #f8f9fa;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 12px;
+}
+
+.search-button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #5f6368;
+    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #e8e8e8;
+    border-color: #e8e8e8;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.left-links, .right-links {
+    display: flex;
+    flex-wrap: wrap;
+}
