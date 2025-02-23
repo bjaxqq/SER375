@@ -28,18 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
         updateImage();
     });
 
-    updateImage();
+    slideshowImage.addEventListener("dblclick", function () {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+    });
 
-    function formatDate(date) {
-        const month = date.getMonth() + 1;
-        const day = date.getDate();
-        const year = date.getFullYear();
-        return `${month}/${day}/${year}`;
-    }
+    updateImage();
 
     const today = new Date();
     const currentDateElement = document.getElementById("current-date");
-    currentDateElement.textContent = formatDate(today);
+    currentDateElement.textContent = today.toLocaleDateString();
 
     const events = [
         {
@@ -64,32 +62,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const pastEventsHeading = document.getElementById("past-events-heading");
     const upcomingEventsHeading = document.getElementById("upcoming-events-heading");
 
-    pastEventsContainer.innerHTML = "";
-    upcomingEventsContainer.innerHTML = "";
-
     let hasPastEvents = false;
     let hasUpcomingEvents = false;
 
     events.forEach(event => {
         const eventDate = new Date(event.date);
-        const eventCard = document.createElement("div");
+        const eventCard = document.createElement("a");
         eventCard.className = "event-card";
+        eventCard.href = event.url;
+        eventCard.target = "_blank";
         eventCard.innerHTML = `
-            <p>${event.name} - ${formatDate(eventDate)}</p>
+            <p>${event.name} - ${eventDate.toLocaleDateString()}</p>
         `;
-
-        eventCard.addEventListener("mouseenter", function () {
-            eventCard.style.backgroundColor = "black";
-            eventCard.style.color = "white";
-        });
-        eventCard.addEventListener("mouseleave", function () {
-            eventCard.style.backgroundColor = "white";
-            eventCard.style.color = "black";
-        });
-
-        eventCard.addEventListener("click", function () {
-            window.open(event.url, "_blank");
-        });
 
         if (eventDate < today) {
             pastEventsContainer.appendChild(eventCard);

@@ -159,6 +159,9 @@ h2 {
     cursor: pointer;
     transition: background-color 0.2s linear, color 0.2s linear;
     font-weight: bold;
+    text-decoration: none;
+    color: black;
+    display: block;
 }
 
 .event-card:hover {
