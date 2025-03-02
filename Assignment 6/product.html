@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/amazon-logo-icon.ico">
+</head>
+<body>
+  <nav>
+    <img src="images/amazon-logo.webp" alt="Amazon Logo">
+  </nav>
+
+  <div class="product-content">
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+      <div class="thumbnail-container">
+        <!-- Thumbnail -->
+      </div>
+      <div class="main-image">
+        <img id="main-image" src="" alt="Main Product Image">
+      </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="product-details">
+      <h1 id="product-name"></h1>
+      <p id="seller-name"></p>
+      <div class="rating">
+        <div class="stars"></div>
+        <span id="average-rating"></span>
+        <span id="total-ratings"></span>
+      </div>
+      <p id="product-description"></p>
+      <div class="price">
+        <span id="original-price"></span>
+        <span id="discounted-price"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="product.js"></script>
+</body>
+</html>
