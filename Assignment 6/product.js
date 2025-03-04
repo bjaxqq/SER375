@@ -16,16 +16,17 @@ async function fetchProduct(productId) {
 }
 
 function renderProductDetails(product) {
+  document.title = product.name;
   document.getElementById('product-name').textContent = product.name;
-  document.getElementById('seller-name').textContent = `Sold by: ${product.seller}`;
-  document.getElementById('average-rating').textContent = product.rating;
-  document.getElementById('total-ratings').textContent = `(${product.totalRatings} Ratings)`;
+  document.getElementById('seller-name').textContent = product.sellerName;
+  document.getElementById('average-rating').textContent = product.ratingAverage.toFixed(1);
+  document.getElementById('total-ratings').textContent = `(${product.numberOfRatings} Ratings)`;
   document.getElementById('product-description').textContent = product.description;
 
   const priceElement = document.getElementById('original-price');
   const discountedPriceElement = document.getElementById('discounted-price');
 
-  if (product.discount) {
+  if (product.discount && product.discount > 0) {
     priceElement.innerHTML = `<span class="strikethrough">$${product.price.toFixed(2)}</span>`;
     discountedPriceElement.textContent = `$${calculateDiscount(product.price, product.discount)}`;
   } else {
@@ -33,18 +34,27 @@ function renderProductDetails(product) {
     discountedPriceElement.textContent = '';
   }
 
-  renderStars(product.rating);
+  renderStars(product.ratingAverage);
   renderImageSelector(product.images);
 }
 
-function renderStars(rating) {
+function renderStars(ratingAverage) {
   const starsContainer = document.querySelector('.stars');
   starsContainer.innerHTML = '';
+  
   for (let i = 0; i < 5; i++) {
-    const star = document.createElement('img');
-    star.src = 'images/Star.svg';
-    star.className = 'star-svg';
-    star.style.fill = i < rating ? 'gold' : 'grey';
+    const star = document.createElement('div');
+    star.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20">
+        <defs>
+          <linearGradient id="star-gradient-${i}">
+            <stop offset="${Math.min(1, Math.max(0, ratingAverage - i)) * 100}%" stop-color="rgb(222, 121, 38)"/>
+            <stop offset="${Math.min(1, Math.max(0, ratingAverage - i)) * 100}%" stop-color="grey"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#star-gradient-${i})" d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,12.118l11.547-1.2L16.026,0.6L20.388,10.918z"/>
+      </svg>
+    `;
     starsContainer.appendChild(star);
   }
 }
@@ -52,6 +62,8 @@ function renderStars(rating) {
 function renderImageSelector(images) {
   const mainImage = document.getElementById('main-image');
   const thumbnailContainer = document.querySelector('.thumbnail-container');
+
+  thumbnailContainer.innerHTML = '';
 
   mainImage.src = images[0];
 
@@ -61,13 +73,18 @@ function renderImageSelector(images) {
     thumbnail.className = 'thumbnail';
     thumbnail.addEventListener('mouseover', () => {
       mainImage.src = image;
+
       thumbnailContainer.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('selected'));
+
       thumbnail.classList.add('selected');
     });
+
+    if (index === 0) {
+      thumbnail.classList.add('selected');
+    }
+
     thumbnailContainer.appendChild(thumbnail);
   });
-
-  thumbnailContainer.querySelector('.thumbnail').classList.add('selected');
 }
 
 function calculateDiscount(price, discount) {
