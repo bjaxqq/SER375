@@ -3,7 +3,7 @@ async function fetchProduct(productId) {
     const response = await fetch(`http://67.205.143.29:3000/products/${productId}`);
     if (!response.ok) {
       if (response.status === 404) {
-        window.location.href = 'index.html';
+        window.location.href = 'home.html';
       }
       throw new Error('Failed to fetch product');
     }
@@ -101,5 +101,5 @@ if (productId) {
     }
   });
 } else {
-  window.location.href = 'index.html';
+  window.location.href = 'home.html';
 }
