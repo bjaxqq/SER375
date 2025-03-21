@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# Environment variables
+.env
+
+# Data files (optional, if you don't want to track them)
+src/data/animals.json
+src/data/users.json
+
+# TypeScript build output
+dist/
