@@ -13,11 +13,12 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.7",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.9",
-    "@types/node": "^22.13.11",
+    "@types/node": "^22.13.13",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   }

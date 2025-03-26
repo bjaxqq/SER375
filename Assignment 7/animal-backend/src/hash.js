@@ -9,7 +9,7 @@ function generateHash(username, password) {
 const [username, password] = process.argv.slice(2);
 
 if (!username || !password) {
-  console.log('Usage: node generateHash.js <username> <password>');
+  console.log('Usage: node src/hash.js <username> <password>');
   process.exit(1);
 }
 

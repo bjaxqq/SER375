@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
-import { readJsonFile, writeJsonFile } from './utils.js';
+import { readJsonFile, writeJsonFile, isValidDate, generateUniqueId } from './utils';
+import { Animal, User, AnimalEvent, DecodedToken } from './interfaces';
 import jwt from 'jsonwebtoken';
 import crypto from 'crypto';
 
@@ -8,31 +9,20 @@ dotenv.config();
 const animalsFilePath = './src/data/animals.json';
 const usersFilePath = './src/data/users.json';
 
-function isValidDate(dateString: string): boolean {
-  const regex = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$/;
-  return regex.test(dateString);
-}
-
-function generateUniqueId(animals: Array<{ id: number }>): number {
-  if (animals.length === 0) return 1;
-  const maxId = Math.max(...animals.map((a) => a.id));
-  return maxId + 1;
-}
-
 async function displayAllAnimals(): Promise<void> {
   try {
-    const animals = await readJsonFile(animalsFilePath);
+    const animals = await readJsonFile<Animal[]>(animalsFilePath);
     console.log('All Animals:');
     console.log(JSON.stringify(animals, null, 2));
   } catch (error) {
-    console.error('Error displaying all animals:', error);
+    console.error('Error displaying all animals:', error instanceof Error ? error.message : error);
   }
 }
 
 async function displayAnimalById(id: number): Promise<void> {
   try {
-    const animals = await readJsonFile(animalsFilePath);
-    const animal = animals.find((a: { id: number; }) => a.id === id);
+    const animals = await readJsonFile<Animal[]>(animalsFilePath);
+    const animal = animals.find(a => a.id === id);
 
     if (animal) {
       console.log(`Animal with ID ${id}:`);
@@ -41,15 +31,15 @@ async function displayAnimalById(id: number): Promise<void> {
       console.log(`No animal found with ID ${id}.`);
     }
   } catch (error) {
-    console.error('Error displaying animal by ID:', error);
+    console.error('Error displaying animal by ID:', error instanceof Error ? error.message : error);
   }
 }
 
 async function login(username: string, password: string): Promise<void> {
   try {
-    const users = await readJsonFile(usersFilePath);
+    const users = await readJsonFile<User[]>(usersFilePath);
     const hash = crypto.createHash('sha256').update(`${username}:${password}`).digest('hex');
-    const user = users.find((u: { hash: string; }) => u.hash === hash);
+    const user = users.find(u => u.hash === hash);
 
     if (user) {
       const token = jwt.sign({ userId: user.id }, process.env.SECRET_KEY!, { expiresIn: '1h' });
@@ -58,48 +48,42 @@ async function login(username: string, password: string): Promise<void> {
       console.log('Invalid username or password.');
     }
   } catch (error) {
-    console.error('Error during login:', error);
+    console.error('Error during login:', error instanceof Error ? error.message : error);
   }
 }
 
 async function getUserInfo(token: string): Promise<void> {
   try {
-    const decoded = jwt.verify(token, process.env.SECRET_KEY!) as { userId: number };
-    const users = await readJsonFile(usersFilePath);
-    const user = users.find((u: { id: number; }) => u.id === decoded.userId);
+    const decoded = jwt.verify(token, process.env.SECRET_KEY!) as DecodedToken;
+    const users = await readJsonFile<User[]>(usersFilePath);
+    const user = users.find(u => u.id === decoded.userId);
 
     if (user) {
       console.log(`User ID: ${user.id}, Name: ${user.name}`);
-      const animals = await readJsonFile(animalsFilePath);
-      const userAnimals = animals.filter((a: { createdByUser: any; }) => a.createdByUser === user.id);
+      const animals = await readJsonFile<Animal[]>(animalsFilePath);
+      const userAnimals = animals.filter(a => a.createdByUser === user.id);
       console.log('Animals added by this user:');
       console.log(JSON.stringify(userAnimals, null, 2));
     } else {
       console.log('User not found.');
     }
   } catch (error) {
-    console.error('Error verifying token:', error);
+    console.error('Error verifying token:', error instanceof Error ? error.message : error);
   }
 }
 
 async function createAnimal(token: string, animalDataJson: string): Promise<void> {
   try {
-    const decoded = jwt.verify(token, process.env.SECRET_KEY!) as { userId: number };
-    const users = await readJsonFile(usersFilePath);
-    const user = users.find((u: { id: number; }) => u.id === decoded.userId);
+    const decoded = jwt.verify(token, process.env.SECRET_KEY!) as DecodedToken;
+    const users = await readJsonFile<User[]>(usersFilePath);
+    const user = users.find(u => u.id === decoded.userId);
 
     if (!user) {
       console.log('Invalid token: User not found.');
       return;
     }
 
-    let animalData: {
-      name: string;
-      sciName: string;
-      description: string[];
-      images: string[];
-      events: Array<{ name: string; date: string; url: string }>;
-    };
+    let animalData: Omit<Animal, 'id' | 'createdByUser'>;
     try {
       animalData = JSON.parse(animalDataJson);
     } catch (error) {
@@ -144,13 +128,13 @@ async function createAnimal(token: string, animalDataJson: string): Promise<void
       }
     }
 
-    const animals = await readJsonFile(animalsFilePath);
+    const animals = await readJsonFile<Animal[]>(animalsFilePath);
     const newId = generateUniqueId(animals);
 
-    const newAnimal = {
+    const newAnimal: Animal = {
       id: newId,
       createdByUser: user.id,
-      ...animalData,
+      ...animalData
     };
 
     animals.push(newAnimal);
@@ -158,7 +142,7 @@ async function createAnimal(token: string, animalDataJson: string): Promise<void
 
     console.log('Animal created successfully:', JSON.stringify(newAnimal, null, 2));
   } catch (error) {
-    console.error('Error creating animal:', error);
+    console.error('Error creating animal:', error instanceof Error ? error.message : error);
   }
 }
 
