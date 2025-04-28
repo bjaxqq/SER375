@@ -1,0 +1,277 @@
+.cartPage {
+  background-color: var(--amazon-light-gray);
+  min-height: 100vh;
+  padding: 20px 0;
+}
+
+.cartContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.cartContent {
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--amazon-border);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.cartHeader h1 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.deselect {
+  background: none;
+  border: none;
+  color: #007185;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.deselect:hover {
+  color: #c7511f;
+  text-decoration: underline;
+}
+
+.priceHeader {
+  text-align: right;
+  font-weight: 700;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+
+.cartItems {
+  border-bottom: 1px solid var(--amazon-border);
+  margin-bottom: 15px;
+}
+
+.cartItem {
+  display: flex;
+  padding: 20px 0;
+  border-top: 1px solid var(--amazon-border);
+}
+
+.itemImage {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.itemImage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.itemDetails {
+  flex-grow: 1;
+}
+
+.itemTitle {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.itemTitle a {
+  color: #007185;
+  text-decoration: none;
+}
+
+.itemTitle a:hover {
+  color: #c7511f;
+  text-decoration: underline;
+}
+
+.itemStock {
+  color: #007600;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.itemSeller {
+  font-size: 14px;
+  color: #565959;
+  margin-bottom: 10px;
+}
+
+.itemActions {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.quantitySelector {
+  position: relative;
+  margin-right: 10px;
+}
+
+.quantitySelect {
+  padding: 5px 25px 5px 10px;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  background-color: #f0f2f2;
+  font-size: 13px;
+  cursor: pointer;
+  appearance: none;
+}
+
+.quantitySelect:hover {
+  background-color: #e3e6e6;
+}
+
+.actionDivider {
+  color: #ddd;
+  margin: 0 10px;
+}
+
+.deleteButton,
+.saveButton {
+  background: none;
+  border: none;
+  color: #007185;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.deleteButton:hover,
+.saveButton:hover {
+  color: #c7511f;
+  text-decoration: underline;
+}
+
+.itemPrice {
+  width: 100px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cartSubtotal {
+  text-align: right;
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.subtotalAmount {
+  font-weight: 700;
+}
+
+.checkoutSection {
+  width: 300px;
+}
+
+.subtotalBox {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.subtotalHeader {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.giftOption {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.proceedButton {
+  width: 100%;
+  background-color: var(--amazon-yellow-button);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.proceedButton:hover {
+  background-color: var(--amazon-yellow-button-hover);
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.emptyCart h2 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.emptyCart p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: #565959;
+}
+
+.continueShoppingButton {
+  background-color: var(--amazon-yellow-button);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.continueShoppingButton:hover {
+  background-color: var(--amazon-yellow-button-hover);
+}
+
+@media (max-width: 900px) {
+  .cartContainer {
+    flex-direction: column;
+  }
+
+  .checkoutSection {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .cartItem {
+    flex-direction: column;
+  }
+
+  .itemImage {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .itemPrice {
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .priceHeader {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+.main-container {
+    margin: 8px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.field-label {
+    width: 80px;
+    margin: 0;
+}
+
+.field-input {
+    width: 200px;
+}
+
+.button {
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+}
+
+.error {
+    color: red;
+}

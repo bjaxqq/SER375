@@ -1,0 +1,92 @@
+.imagePreviewContainer {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.thumbnailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 60px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.thumbnail:hover {
+  border-color: #e77600;
+  box-shadow: 0 0 2px 1px rgba(228, 121, 17, 0.3);
+}
+
+.selectedThumbnail {
+  border-color: #e77600;
+  box-shadow: 0 0 3px 2px rgba(228, 121, 17, 0.5);
+}
+
+.thumbnailImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.mainImageContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  position: relative;
+  border: 1px solid transparent;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.mainImageContainer:hover {
+  border-color: #e7e7e7;
+}
+
+.zooming {
+  border-color: #e77600;
+}
+
+.mainImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.1s ease-out;
+}
+
+.noImages {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  color: #555;
+  font-style: italic;
+}
+
+.zoomInstructions {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #333;
+  pointer-events: none;
+}

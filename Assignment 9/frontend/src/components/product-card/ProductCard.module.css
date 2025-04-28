@@ -1,0 +1,212 @@
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--amazon-border);
+  border-radius: 8px;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.productContainer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.productImageContainer {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.productImage:hover {
+  transform: scale(1.05);
+}
+
+.quickAddToCartButton {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--amazon-yellow-button);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 15px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  opacity: 0;
+  animation: fadeIn 0.2s forwards;
+}
+
+.quickAddToCartButton:hover {
+  background-color: var(--amazon-yellow-button-hover);
+}
+
+.quickAddToCartButton.loading {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.quickAddToCartButton.added {
+  background-color: #4caf50;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.productContent {
+  padding: 10px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 150px;
+}
+
+.productLink {
+  text-decoration: none;
+  color: #0066c0;
+  margin-bottom: 8px;
+}
+
+.productTitle {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.4;
+  max-height: 2.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.productLink:hover .productTitle {
+  color: #c45500;
+  text-decoration: underline;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.ratingCount {
+  margin-left: 5px;
+  font-size: 12px;
+  color: #007185;
+}
+
+.priceContainer {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.discountedPrice {
+  font-size: 18px;
+  font-weight: 700;
+  color: #b12704;
+}
+
+.originalPrice {
+  font-size: 13px;
+  text-decoration: line-through;
+  color: #565959;
+  margin-left: 5px;
+}
+
+.discountBadge {
+  background-color: #b12704;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 8px;
+}
+
+.sellerInfo {
+  font-size: 12px;
+  color: #565959;
+  margin-bottom: 10px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.addToCartButton {
+  flex: 1;
+  background-color: var(--amazon-yellow-button);
+  border: 1px solid #fcd200;
+  border-radius: 20px;
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background-color 0.2s;
+}
+
+.addToCartButton:hover {
+  background-color: var(--amazon-yellow-button-hover);
+}
+
+.addToCartButton:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.wishlistButton {
+  width: 40px;
+  background-color: white;
+  border: 1px solid #d5d9d9;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.wishlistButton:hover {
+  background-color: #f7fafa;
+}

@@ -1,0 +1,324 @@
+.navbar {
+  background-color: var(--amazon-blue);
+  color: white;
+  width: 100%;
+}
+
+.navbarTop {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  gap: 10px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.logo {
+  height: 35px;
+  width: auto;
+}
+
+.logoContainer:hover {
+  outline: 1px solid white;
+  border-radius: 2px;
+}
+
+.deliveryLocation {
+  display: flex;
+  align-items: flex-start;
+  padding: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.deliveryLocation:hover {
+  outline: 1px solid white;
+  border-radius: 2px;
+}
+
+.deliveryIcon {
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.deliveryText {
+  display: flex;
+  flex-direction: column;
+}
+
+.deliveryGreeting {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.deliveryLocation {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.searchForm {
+  flex-grow: 1;
+  max-width: 800px;
+}
+
+.searchContainer {
+  display: flex;
+  height: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.searchCategoryContainer {
+  background-color: #f3f3f3;
+  border-right: 1px solid #cdcdcd;
+  display: flex;
+  align-items: center;
+}
+
+.searchCategory {
+  background: transparent;
+  border: none;
+  padding: 0 8px;
+  font-size: 12px;
+  color: #555;
+  height: 100%;
+  cursor: pointer;
+}
+
+.searchInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  min-width: 100px;
+}
+
+.searchButton {
+  background-color: var(--amazon-orange);
+  border: none;
+  color: black;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchButton:hover {
+  background-color: var(--amazon-orange-dark);
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  padding: 5px 9px;
+  margin: 0 2px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.navItem:hover {
+  outline: 1px solid white;
+  border-radius: 2px;
+  color: white;
+  text-decoration: none;
+}
+
+.navItemLine1 {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.navItemLine2 {
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.dropdownIcon {
+  margin-left: 2px;
+}
+
+.navItemCart {
+  display: flex;
+  align-items: flex-end;
+  padding: 5px 9px;
+  margin: 0 2px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.navItemCart:hover {
+  outline: 1px solid white;
+  border-radius: 2px;
+  color: white;
+  text-decoration: none;
+}
+
+.cartIconContainer {
+  position: relative;
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  left: 13px;
+  color: var(--amazon-orange);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cartText {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.navbarBottom {
+  background-color: #232f3e;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.menuIcon {
+  display: flex;
+  align-items: center;
+  padding: 5px 9px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menuIcon span {
+  margin-left: 5px;
+}
+
+.menuIcon:hover {
+  outline: 1px solid white;
+  border-radius: 2px;
+}
+
+.navbarLinks {
+  display: flex;
+  margin-left: 10px;
+}
+
+.navbarLink {
+  color: white;
+  text-decoration: none;
+  padding: 5px 9px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.navbarLink:hover {
+  outline: 1px solid white;
+  border-radius: 2px;
+  color: white;
+  text-decoration: none;
+}
+
+.accountDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 350px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.13);
+  z-index: 1000;
+  color: black;
+  margin-top: 10px;
+}
+
+.accountDropdownHeader {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.signInButton {
+  background-color: var(--amazon-yellow-button);
+  border: none;
+  border-radius: 3px;
+  padding: 8px 0;
+  font-weight: bold;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+.signInButton:hover {
+  background-color: var(--amazon-yellow-button-hover);
+  color: black;
+  text-decoration: none;
+}
+
+.accountDropdownContent {
+  padding: 15px;
+}
+
+.accountDropdownSection {
+  margin-bottom: 15px;
+}
+
+.accountDropdownSection h4 {
+  margin: 0 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: 16px;
+}
+
+.accountDropdownSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accountDropdownSection li {
+  margin-bottom: 8px;
+}
+
+.accountDropdownSection a {
+  color: #111;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.accountDropdownSection a:hover {
+  color: var(--amazon-orange);
+  text-decoration: underline;
+}
+
+.accountDropdownFooter {
+  padding-top: 10px;
+  border-top: 1px solid #e7e7e7;
+}
+
+.signOutButton {
+  background: none;
+  border: none;
+  color: #111;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.signOutButton:hover {
+  color: var(--amazon-orange);
+  text-decoration: underline;
+}

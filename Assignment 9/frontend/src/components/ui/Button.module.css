@@ -1,0 +1,26 @@
+.button {
+  background-color: var(--amazon-yellow-button);
+  border: 1px solid #fcd200;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: var(--amazon-yellow-button-hover);
+}
+
+.button:active {
+  background-color: #f0b800;
+}
+
+.button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+  border-color: #e0e0e0;
+}

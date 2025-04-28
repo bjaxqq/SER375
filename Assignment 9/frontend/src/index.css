@@ -1,0 +1,53 @@
+:root {
+  font-family: "Amazon Ember", Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --amazon-orange: #ff9900;
+  --amazon-orange-dark: #e68a00;
+  --amazon-blue: #232f3e;
+  --amazon-light-gray: #f3f3f3;
+  --amazon-border: #ddd;
+  --amazon-yellow-button: #ffd814;
+  --amazon-yellow-button-hover: #f7ca00;
+}
+
+body {
+  margin: 0;
+  background-color: var(--amazon-light-gray);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #007185;
+}
+
+a:hover {
+  color: #c7511f;
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("https://m.media-amazon.com/images/S/sash/KFPk-9IF4FqAqY-.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("https://m.media-amazon.com/images/S/sash/mzgG5xAQOSLi2JO.woff2") format("woff2");
+  font-weight: bold;
+}
