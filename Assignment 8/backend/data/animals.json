@@ -1,0 +1,215 @@
+[
+  {
+    "id": 1,
+    "name": "Bunny Harvestman",
+    "sciName": "Metagryne bicolumnata",
+    "description": [
+      "The Bunny Harvestman, often called the \"bunny spider\" due to its adorable appearance, is a species of harvestman (not a true spider) discovered in Ecuador. Its unique look, with two dark eye-like spots and elongated pedipalps resembling bunny ears, has made it an internet sensation. Despite its cute appearance, little is known about its behavior in the wild. Like other harvestmen, it is likely a nocturnal omnivore, feeding on small insects, plant matter, and decaying organic material. Its striking appearance has raised interest in arachnid conservation, though its exact conservation status remains uncertain due to limited research.",
+      "Unlike true spiders, Bunny Harvestmen lack venom and silk glands, relying instead on their long legs for sensing their environment and escaping predators. Their \"bunny ears\" are actually modified pedipalps, which may play a role in mating or sensory perception. These creatures are solitary and prefer humid forest habitats, where they can remain hidden under leaves or bark during the day. Their harmless nature and unusual appearance make them a fascinating example of evolutionary adaptation in arachnids.",
+      "Click <a href=\"https://spidersplanet.com/the-bunny-harvestman-spider\">here</a> to learn more about the Bunny Harvestman from Spiders Planet."
+    ],
+    "images": [
+      "https://d.newsweek.com/en/full/1202982/42589465072-3dde8cfffa-o.webp?w=737&f=da5c73e529b3cf4240ea4b352a017fea",
+      "https://spidersplanet.com/wp-content/uploads/2023/04/bunny-harvestman-spider-2.jpg",
+      "https://live.staticflickr.com/4624/39598863715_9135f9c2e0_b.jpg",
+      "https://static.wixstatic.com/media/b91cef_ef4bc4b20c1948889d65b532e7d011a0~mv2.png/v1/fill/w_858,h_534,al_c,q_90/b91cef_ef4bc4b20c1948889d65b532e7d011a0~mv2.png"
+    ],
+    "video": "https://www.youtube.com/embed/483tm-29hE4?si=F7lWlqdW_4qFupU_",
+    "events": [
+      {
+        "name": "Exhibit at Museum",
+        "date": "01/18/2025",
+        "url": "https://www.example.com/exhibit-at-museum"
+      },
+      {
+        "name": "Lecture",
+        "date": "02/05/2025",
+        "url": "https://www.example.com/lecture"
+      },
+      {
+        "name": "Meet the Bunny Harvestman",
+        "date": "05/08/2025",
+        "url": "https://www.example.com/meet-the-animal"
+      }
+    ],
+    "createdBy": 1
+  },
+  {
+    "id": 2,
+    "name": "Narwhal",
+    "sciName": "Monodon monoceros",
+    "description": [
+      "The Narwhal, often called the \"unicorn of the sea,\" is a medium-sized Arctic whale known for its long, spiral tusk—actually an elongated canine tooth that can grow up to 10 feet. Found in the icy waters of Canada, Greenland, and Russia, narwhals are deep divers, feeding on fish, squid, and shrimp beneath sea ice. Their tusks, once thought to have magical properties, are now believed to play a role in sensing changes in their environment, such as salinity and temperature. Climate change and hunting pose significant threats to their survival.",
+      "Narwhals are highly social, traveling in pods of 10-20 individuals, though larger gatherings of hundreds have been observed. They communicate using clicks, whistles, and knocks, which also help them navigate and hunt in the dark Arctic waters. Unlike most whales, they lack a dorsal fin, an adaptation to swimming under ice. Their elusive nature makes them difficult to study, but satellite tracking has revealed their long migrations in response to shifting ice patterns.",
+      "Click <a href=\"https://www.worldwildlife.org/species/narwhal\">here</a> to learn more about the Narwhal from the World Wildlife Fund."
+    ],
+    "images": [
+      "https://files.worldwildlife.org/wwfcmsprod/images/HERO_Narwhals_Canada/magazine_hero/2l0u305168_Medium_WW248926.jpg",
+      "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/2448x1224+0+0/resize/1100/quality/50/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F75%2F49%2F367da69d4208bc1e7e53f1155c12%2Fgettyimages-1470070765.jpg",
+      "https://i.natgeofe.com/n/d53dd4aa-56db-42b0-b17d-5bbef4f70fe8/narwhal.jpg?wp=1&w=1084.125&h=721.875",
+      "https://i.natgeofe.com/k/0cfd425f-cc31-45b5-af68-4213c57b068d/narwhal_tooth_4x3.jpg"
+    ],
+    "video": "https://www.youtube.com/embed/UVwYygnGkPE?si=TtBu31rtD0lLYcj2",
+    "events": [
+      {
+        "name": "Exhibit at Museum",
+        "date": "01/18/2025",
+        "url": "https://www.example.com/exhibit-at-museum"
+      },
+      {
+        "name": "Lecture",
+        "date": "02/05/2025",
+        "url": "https://www.example.com/lecture"
+      },
+      {
+        "name": "Meet the Narwhal",
+        "date": "05/08/2025",
+        "url": "https://www.example.com/meet-the-animal"
+      }
+    ],
+    "createdBy": 1
+  },
+  {
+    "id": 3,
+    "name": "Pygmy Hippopotamus",
+    "sciName": "Choeropsis liberiensis",
+    "description": [
+      "The Pygmy Hippopotamus is a small, elusive relative of the common hippopotamus, native to the forests and swamps of West Africa, primarily Liberia. Unlike its larger cousin, it is solitary, nocturnal, and spends much of its time hidden in dense vegetation near water sources. Weighing only about 400-600 pounds (compared to the common hippo’s 3,000+ pounds), it has a more streamlined body, allowing it to navigate thick forests with ease. Sadly, habitat destruction and hunting have made this species endangered, with fewer than 2,500 individuals remaining in the wild.",
+      "Pygmy hippos are herbivores, feeding on ferns, leaves, fruits, and aquatic plants. They are excellent swimmers but spend less time in water than common hippos, only submerging to cool off or avoid predators. Their secretive nature makes them difficult to study in the wild, but captive breeding programs have helped increase awareness about their conservation needs. Unlike their aggressive relatives, pygmy hippos are generally shy and non-territorial, though they may mark trails with dung to communicate with others.",
+      "Click <a href=\"https://animals.sandiegozoo.org/animals/pygmy-hippopotamus\">here</a> to learn more about the Pygmy Hippopotamus from the San Diego Zoo."
+    ],
+    "images": [
+      "https://wildark.org/wp-content/uploads/2019/05/AdobeStock_101479341_p.jpg",
+      "https://www.fauna-flora.org/wp-content/uploads/2023/05/naturepl_01529314-e1693304637712.jpg",
+      "https://www.kget.com/wp-content/uploads/sites/2/2020/05/PHippo_003_Web.jpg?w=1280",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyKDU-AYxS6R5l65EoCDBUaOLUAlUm-m7m2Q&s"
+    ],
+    "video": "https://www.youtube.com/embed/Fz0DXcmGadg?si=hA9a2BckNK973Imv",
+    "events": [
+      {
+        "name": "Exhibit at Museum",
+        "date": "01/18/2025",
+        "url": "https://www.example.com/exhibit-at-museum"
+      },
+      {
+        "name": "Lecture",
+        "date": "02/05/2025",
+        "url": "https://www.example.com/lecture"
+      },
+      {
+        "name": "Meet the Pygmy Hippopotamus",
+        "date": "05/08/2025",
+        "url": "https://www.example.com/meet-the-animal"
+      }
+    ],
+    "createdBy": 1
+  },
+  {
+    "id": 4,
+    "name": "Red Kangaroo",
+    "sciName": "Macropus rufus",
+    "description": [
+      "The Red Kangaroo is the largest marsupial and a symbol of the Australian outback, known for its powerful hind legs, long tail, and distinctive reddish-brown fur in males (females are bluish-gray). These kangaroos are built for endurance, capable of hopping at speeds up to 35 mph and covering 25 feet in a single bound. They thrive in arid and semi-arid regions, where they graze on grasses and shrubs, conserving water by producing concentrated urine and minimizing sweating. Despite their adaptability, droughts and habitat changes pose threats to their populations.",
+      "Red Kangaroos live in loose groups called \"mobs,\" led by a dominant male who competes for mating rights through boxing matches. Females have a unique reproductive system—they can pause embryo development (diapause) until environmental conditions improve. Their strong social structure and efficient hopping make them one of the most successful large herbivores in Australia. They also play a key role in seed dispersal and maintaining grassland ecosystems.",
+      "Click <a href=\"https://australian.museum/learn/animals/mammals/red-kangaroo\">here</a> to learn more about the Red Kangaroo from the Australian Museum."
+    ],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Red_kangaroo_-_melbourne_zoo.jpg/960px-Red_kangaroo_-_melbourne_zoo.jpg",
+      "https://transforms.stlzoo.org/production/animals/red-kangaroo-02-01.jpg?w=1200&h=630&q=82&auto=format&fit=clip&dm=1654795233&s=a06c0f8f9d3274ba845e49906fa4703d",
+      "https://nypost.com/wp-content/uploads/sites/2/2022/03/CATERS_BUFF_KANGAROO_002_3485376.jpg?quality=90&strip=all",
+      "https://www.usatoday.com/gcdn/presto/2018/12/10/USAT/cc965a47-b88a-4cd9-8e12-17a72eb84a4c-EPA_AUSTRALIA_ROGER_THE_BUFF_KANGAROO_DIES.JPG?crop=1499,1124,x0,y0"
+    ],
+    "video": "https://www.youtube.com/embed/fs5hCgWiP3E?si=Z_hF1MY0BTwCzuu0",
+    "events": [
+      {
+        "name": "Exhibit at Museum",
+        "date": "01/18/2025",
+        "url": "https://www.example.com/exhibit-at-museum"
+      },
+      {
+        "name": "Lecture",
+        "date": "02/05/2025",
+        "url": "https://www.example.com/lecture"
+      },
+      {
+        "name": "Meet the Red Kangaroo",
+        "date": "05/08/2025",
+        "url": "https://www.example.com/meet-the-animal"
+      }
+    ],
+    "createdBy": 1
+  },
+  {
+    "id": 5,
+    "name": "Goodfellow's Tree Kangaroo",
+    "sciName": "Dendrolagus goodfellowi",
+    "description": [
+      "Goodfellow's Tree Kangaroo is a marsupial that comes from the rainforests of Papua New Guinea. As opposed to their ground-dwelling kangaroo relatives, these creatures have fully adapted to life in the trees with their strong limbs, sharp claws, and long tails for balancing. They are mostly herbivores, eating leaves, fruits, and flowers. Unfortunately, their population is in decline from habitat loss and hunting, resulting in them becoming an endangered species. There are many conservation efforts underway to try and protect their natural habitat to ensure their survival.",
+      "The Goodfellow's Tree Kangaroos are great climbers, able to jump up to 30 feet between trees. Their movement consists of walking or hopping slowly through branches, something that sets them apart from their jumping ground counterparts. These kangaroos are solitary and territorial and marking their areas with their scent glands. They are also one of only a couple kangaroo species to be able to move their hind legs independently to help navigating through branches. They are also rather shy creatures but they play a big role in their ecosystem through the dispersion of seeds through what they eat.",
+      "Click <a href=\"https://www.waza.org/priorities/conservation/conservation-breeding-programmes/global-species-management-plans/goodfellows-tree-kangaroo/\">here</a> to learn more about Goodfellow's Tree Kangaroo from the World Association of Zoos and Aquariums."
+    ],
+    "images": [
+      "https://www.waza.org/wp-content/uploads/2019/02/Tree-Kangaroo2%C2%A9Perth-Zoo.jpeg",
+      "https://wildark.org/wp-content/uploads/2019/05/A3A3HC.jpg",
+      "https://www.wildlifesydney.com.au/media/ui4kv3yl/kofi-tree-kangaroo.jpg",
+      "https://palmoildetectives.com/wp-content/uploads/2021/02/wp-1613039890229.jpg"
+    ],
+    "video": "https://www.youtube.com/embed/ca2iwKjwchM",
+    "events": [
+      {
+        "name": "Exhibit at Museum",
+        "date": "01/18/2025",
+        "url": "https://www.example.com/exhibit-at-museum"
+      },
+      {
+        "name": "Lecture",
+        "date": "02/05/2025",
+        "url": "https://www.example.com/lecture"
+      },
+      {
+        "name": "Meet the Goodfellow's Tree Kangaroo",
+        "date": "05/08/2025",
+        "url": "https://www.example.com/meet-the-animal"
+      }
+    ],
+    "createdBy": 2
+  },
+  {
+    "id": 6,
+    "name": "Bat-Eared Fox",
+    "sciName": "Otocyon megalotis",
+    "description": [
+      "The bat-eared fox (Otocyon megalotis) is a small, insectivorous mammal native to the African savanna.",
+      "Recognizable by its enormous ears, which can grow up to 5 inches long, this fox is well-adapted to its arid environment. It primarily feeds on termites and other insects, using its keen hearing to locate prey underground.",
+      "Bat-eared foxes are social animals, often living in pairs or small groups, and are known for their playful behavior. They inhabit two main regions in Africa: the eastern part (Ethiopia to Tanzania) and the southern part (Angola to South Africa).",
+      "Bat-eared foxes have several unique adaptations. Their large ears not only help them detect insects but also regulate their body temperature in the hot African climate. They have more teeth (46–50) than most other carnivores, which are specialized for crushing insects.",
+      "Unlike many other fox species, bat-eared foxes are primarily monogamous, with both parents participating in raising their young. They are also known for their distinctive vocalizations, including whistles and chirps, which they use to communicate with each other.",
+      "Click <a href=\"https://www.nationalgeographic.com/animals/mammals/facts/bat-eared-fox)\"</a> to learn more about the bat-eared fox from National Geographic."
+    ],
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/84/Otocyon_megalotis_-_Etosha_2014.jpg",
+      "https://www.awf.org/sites/default/files/styles/vertical_image/public/2020-04/SpeciesPage_BatEaredFox03_01_Solutions.jpg?h=3c6d87fa&itok=clN5Kez6",
+      "https://animals.sandiegozoo.org/sites/default/files/inline-images/bat-eared-fox-kit.jpg",
+      "https://www.awf.org/sites/default/files/styles/horizontal_image/public/2020-04/SpeciesPage_BatEaredFox03_02_Solutions.jpg?h=05d4a2d9&itok=CI18ZBFL"
+    ],
+    "video": "https://www.youtube.com/embed/jOJRgIjv9FY",
+    "events": [
+      {
+        "name": "Exhibit at Museum",
+        "date": "01/18/2025",
+        "url": "https://www.example.com/exhibit-at-museum"
+      },
+      {
+        "name": "Lecture",
+        "date": "02/05/2025",
+        "url": "https://www.example.com/lecture"
+      },
+      {
+        "name": "Meet the Bat-Eared Fox",
+        "date": "05/08/2025",
+        "url": "https://www.example.com/meet-the-animal"
+      }
+    ],
+    "createdBy": 2
+  }
+]

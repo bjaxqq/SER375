@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Details | National Geographic</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="scripts/animal.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html"><img class="nav-logo" src="images/nat-geo-logo-light.png" alt="National Geographic Logo"></a>
+        <div class="nav-right">
+            <a href="login.html" class="nav-link" id="login-link">Login</a>
+            <a href="profile.html" class="nav-link" id="profile-link" style="display: none;">Profile</a>
+            <a href="#" class="nav-link" id="logout-link" style="display: none;">Logout</a>
+            <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dark-mode-icon">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <div class="flex flex-justify-center">
+        <div class="main-container">
+            <div id="animal-loading" class="loading">Loading animal details...</div>
+            
+            <div id="admin-controls" style="display: none;" class="edit-buttons">
+                <button id="edit-animal-btn" class="edit-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                    Edit Animal
+                </button>
+                <button id="delete-animal-btn" class="delete-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                    Delete Animal
+                </button>
+            </div>
+            
+            <div id="edit-form-container" class="edit-mode-container" style="display: none;">
+                <div class="edit-mode-header">
+                    <h3>Edit Animal</h3>
+                    <button id="cancel-edit" class="secondary-button">Cancel</button>
+                </div>
+                <form id="edit-animal-form">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="edit-name">Animal Name</label>
+                                <input type="text" id="edit-name" name="name" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="edit-sciName">Scientific Name</label>
+                                <input type="text" id="edit-sciName" name="sciName" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-description">Description (separate paragraphs with new lines)</label>
+                        <textarea id="edit-description" name="description" rows="6" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-images">Image URLs (one per line)</label>
+                        <textarea id="edit-images" name="images" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-video">YouTube Embed URL</label>
+                        <input type="text" id="edit-video" name="video" required>
+                    </div>
+                    
+                    <div id="edit-events-container">
+                        <h3>Events</h3>
+                        <div id="edit-event-inputs"></div>
+                        <button type="button" id="add-edit-event" class="secondary-button">Add Event</button>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 30px;">
+                        <button type="submit" class="submit-button">Save Changes</button>
+                    </div>
+                </form>
+                
+                <div id="edit-success" class="success-message" style="display: none;">
+                    Animal updated successfully!
+                </div>
+                
+                <div id="edit-error" class="error-message" style="display: none;">
+                    Error updating animal. Please try again.
+                </div>
+            </div>
+            
+            <div id="animal-content" style="display: none;">
+                <h1 id="title" class="title-heading"></h1>
+                <p class="scientific-name"></p>
+                <img class="title-image" alt="Animal Image">
+                
+                <h2 id="about" class="about-label">About</h2>
+                <div id="description-container"></div>
+
+                <h2 id="images">Images</h2>
+                <div class="slideshow-container">
+                    <img class="slideshow-image" alt="Animal Image">
+                    <div class="slideshow-button-container">
+                        <button class="slideshow-button" id="prev">&lt;</button>
+                        <p id="image-counter">1/1</p>
+                        <button class="slideshow-button" id="next">&gt;</button>
+                    </div>
+                </div>
+
+                <h2 id="videos">Videos</h2>
+                <div class="video-container">
+                    <iframe class="video" allowfullscreen></iframe>
+                </div>
+
+                <h2 id="events" class="no-margin">Events</h2>
+                <p class="today-date"><b>Today's Date:</b> <span id="current-date"></span></p>
+                <div id="events-container">
+                    <h3 id="past-events-heading" style="display: none;">Past Events</h3>
+                    <div id="past-events"></div>
+                    
+                    <h3 id="upcoming-events-heading" style="display: none;">Upcoming Events</h3>
+                    <div id="upcoming-events"></div>
+                </div>
+            </div>
+            
+            <div id="error-message" style="display: none;">
+                <h2>Error</h2>
+                <p>Unable to load animal details. Please try again later.</p>
+                <a href="index.html" class="submit-button">Return to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="links-container">
+            <h4>Legal</h4>
+            <a href="https://disneytermsofuse.com/english/">Terms of Use</a>
+            <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/">Privacy Policy</a>
+        </div>
+        <div class="links-container">
+            <h4>Join Us</h4>
+            <a href="#">Subscribe</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Work at Nat Geo</a>
+        </div>
+        <div class="links-container">
+            <h4>Follow Us</h4>
+            <a href="https://www.instagram.com/natgeo/">Instagram</a>
+            <a href="https://www.facebook.com/natgeo">Facebook</a>
+            <a href="https://www.youtube.com/@NatGeo">YouTube</a>
+        </div>
+    </div>
+
+    <div id="confirm-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Confirm Deletion</h3>
+            <p>Are you sure you want to delete this animal? This action cannot be undone.</p>
+            <div class="modal-buttons">
+                <button id="confirm-delete" class="delete-button">Delete</button>
+                <button id="cancel-delete" class="secondary-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
